@@ -6,7 +6,9 @@
 # gugu()
 
 # 코너가 말한 5x5 2차원 배열
-a = [[i for i in range(j, j + 5)] for j in range(1, 26, 5)]
+a = [[i for i in range(j, j + 6)] for j in range(1, 36, 6)]
+
 
 for item in a :
     print(item)
+    
