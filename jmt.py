@@ -10,15 +10,17 @@ jf = ["스시네", "오니기리", "참치와연어", "이라시예맛세", "곤
 
 def choose_f() :
     hello = int(input("1.한식, 2.중식, 3.일식 중 한가지를 숫자로 입력해주세 : "))
-
+    result = ""
     if hello is 1 :
-        print(random.choice(kf))
+        result = random.choice(kf)
     elif hello is 2 :
-        print(random.choice(cf))
+        result = random.choice(cf)
     elif hello is 3 :
-        print(random.choice(jf))
+        result = random.choice(jf)
     else :
         print("잘 못 입력하셨습니다.")
         choose_f()
+
+    print(result)
 
 choose_f()
