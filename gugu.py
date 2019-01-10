@@ -1,13 +1,24 @@
 # 구구단!!
+#에러 예외 처리 하기
 def gugu():
-    a = int(input("몇 단이요?"))
-    for i in range(1,10):
-        print("{} * {} = {}".format(a,i,a*i))
+    result = "2~9사이 숫자만 입력해주세요."
+
+    try:
+        a = int(input("몇 단이요?"))
+        if a < 2 or a > 9:
+            print(result)
+            return gugu()
+
+    except UnboundLocalError:
+        print(result)
+        return gugu()
+
+    except ValueError:
+        print(result)
+        return gugu()
+
+    else :
+        for i in range(1,10):
+            print("{} * {} = {}".format(a,i,a*i))
 
 gugu()
-
-# 5x5 2차원 배열
-# a = [[i for i in range(j, j+5)] for j in range(1, 26, 5)]
-#
-# for item in a :
-#     print(item)
